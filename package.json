@@ -158,7 +158,7 @@
     ]
   },
   "codegenConfig": {
-    "name": "RNReactNativeImeiSpec",
+    "name": "RNImeiSpec",
     "type": "modules",
     "jsSrcsDir": "src"
   }

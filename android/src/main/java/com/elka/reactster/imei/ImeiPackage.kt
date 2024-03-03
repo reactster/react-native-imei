@@ -1,4 +1,4 @@
-package com.reactster.reactnativeimei
+package com.elka.reactster.imei
 
 import com.facebook.react.TurboReactPackage
 import com.facebook.react.bridge.NativeModule
@@ -7,10 +7,10 @@ import com.facebook.react.module.model.ReactModuleInfo
 import com.facebook.react.module.model.ReactModuleInfoProvider
 import java.util.HashMap
 
-class ReactNativeImeiPackage : TurboReactPackage() {
+class ImeiPackage : TurboReactPackage() {
   override fun getModule(name: String, reactContext: ReactApplicationContext): NativeModule? {
-    return if (name == ReactNativeImeiModule.NAME) {
-      ReactNativeImeiModule(reactContext)
+    return if (name == ImeiModule.NAME) {
+      ImeiModule(reactContext)
     } else {
       null
     }
@@ -19,11 +19,11 @@ class ReactNativeImeiPackage : TurboReactPackage() {
   override fun getReactModuleInfoProvider(): ReactModuleInfoProvider {
     return ReactModuleInfoProvider {
       val moduleInfos: MutableMap<String, ReactModuleInfo> = HashMap()
-      moduleInfos[ReactNativeImeiModule.NAME] = ReactModuleInfo(
-        ReactNativeImeiModule.NAME,
-        ReactNativeImeiModule.NAME,
+      moduleInfos[ImeiModule.NAME] = ReactModuleInfo(
+        ImeiModule.NAME,
+        ImeiModule.NAME,
         false,  // canOverrideExistingModule
-        false,  // needsEagerInit
+        true,  // needsEagerInit
         true,  // hasConstants
         false,  // isCxxModule
         true // isTurboModule

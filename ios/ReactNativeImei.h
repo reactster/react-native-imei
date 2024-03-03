@@ -1,12 +1,12 @@
 
 #ifdef RCT_NEW_ARCH_ENABLED
-#import "RNReactNativeImeiSpec.h"
+#import "RNImeiSpec.h"
 
-@interface ReactNativeImei : NSObject <NativeReactNativeImeiSpec>
+@interface Imei : NSObject <NativeImeiSpec>
 #else
 #import <React/RCTBridgeModule.h>
 
-@interface ReactNativeImei : NSObject <RCTBridgeModule>
+@interface Imei : NSObject <RCTBridgeModule>
 #endif
 
 @end

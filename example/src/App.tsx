@@ -1,14 +1,15 @@
 import * as React from 'react';
-
 import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from '@reactster/react-native-imei';
-
-const result = multiply(3, 7);
+import { getIMEI } from '@reactster/react-native-imei';
 
 export default function App() {
+  React.useEffect(() => {
+    getIMEI().then(console.log).catch(console.error);
+  }, []);
+
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Text>Hello World</Text>
     </View>
   );
 }
